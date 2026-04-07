@@ -8,5 +8,3 @@ cloud-stopwords:
 ---
 
 ## Browse Cities
-
-Example custom cloud page.

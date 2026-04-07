@@ -9,4 +9,4 @@ cloud-stopwords:
 
 ## Browse Counties
 
-Example custom cloud page.
+Some Polk's directories cover rural residents of the surrounding county.

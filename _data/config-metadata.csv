@@ -14,3 +14,4 @@ type,Type,,,DCTERMS.type,
 format,Format,,,,encodingFormat
 language,Language,,,DCTERMS.language,
 county_covered,Counties,,,,
+digitized,Digitized,,,,

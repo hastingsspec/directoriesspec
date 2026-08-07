@@ -8,3 +8,4 @@ identifier,,,true,Identifier
 towns_covered,Cities,,true,
 type,Directory Type,,,
 county_covered,Counties,,true,
+digitized,Digitized,,true

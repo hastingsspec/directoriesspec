@@ -1,7 +1,7 @@
 objectid,title,type,date,archival_date,towns_covered,county_covered,display_template,format,digitized
-directories0001,Aberdeen,phone book,1957,1957,Aberdeen; Springfield,,record,record,no
-directories0002,Aberdeen,phone book,1959,1959,Aberdeen; Springfield,,record,record,no
-directories0003,Aberdeen,phone book,1960,1960,Aberdeen; Springfield,,record,record,no
+directories0001,Aberdeen,phone book,1957,1957,Aberdeen; Springfield,,record,record,yes
+directories0002,Aberdeen,phone book,1959,1959,Aberdeen; Springfield,,record,record,yes
+directories0003,Aberdeen,phone book,1960,1960,Aberdeen; Springfield,,record,record,yes
 directories0004,Aberdeen,phone book,1967,1967,Aberdeen; Springfield,,record,record,no
 directories0005,Aberdeen,phone book,1969,1969,Aberdeen; Springfield,,record,record,no
 directories0006,Aberdeen,phone book,1977,1977,Aberdeen; Springfield,,record,record,no
@@ -17,13 +17,13 @@ directories0015,Aberdeen,phone book,1988,1988,Aberdeen; Springfield,,record,reco
 directories0016,Aberdeen,phone book,1990,1990-1991,Aberdeen; Springfield,,record,record,no
 directories0017,Aberdeen,phone book,1991,1991-1992,Aberdeen; Springfield,,record,record,no
 directories0018,Aberdeen,phone book,1992,1992,Aberdeen; Springfield,,record,record,no
-directories0019,American Falls,phone book,1953,1953,American Falls; Rockland; Aberdeen,,record,record,no
-directories0020,American Falls,phone book,1955,1955,American Falls; Rockland,,record,record,no
-directories0021,American Falls,phone book,1958,1958,American Falls; Rockland,,record,record,no
-directories0022,American Falls,phone book,1959,1959,American Falls; Rockland,,record,record,no
-directories0023,American Falls,phone book,1960,1960,American Falls; Rockland,,record,record,no
-directories0024,American Falls,phone book,1961,1961,American Falls; Rockland,,record,record,no
-directories0025,American Falls,phone book,1962,1962,American Falls; Rockland,,record,record,no
+directories0019,American Falls,phone book,1953,1953,American Falls; Rockland; Aberdeen,,record,record,yes
+directories0020,American Falls,phone book,1955,1955,American Falls; Rockland,,record,record,yes
+directories0021,American Falls,phone book,1958,1958,American Falls; Rockland,,record,record,yes
+directories0022,American Falls,phone book,1959,1959,American Falls; Rockland,,record,record,yes
+directories0023,American Falls,phone book,1960,1960,American Falls; Rockland,,record,record,yes
+directories0024,American Falls,phone book,1961,1961,American Falls; Rockland,,record,record,yes
+directories0025,American Falls,phone book,1962,1962,American Falls; Rockland,,record,record,yes
 directories0026,American Falls,phone book,1965,1965,American Falls; Rockland,,record,record,no
 directories0027,American Falls,phone book,1967,1967,American Falls; Rockland,,record,record,no
 directories0028,American Falls,phone book,1968,1968,American Falls; Rockland,,record,record,no
@@ -567,7 +567,7 @@ directories0565,Lewiston,phone book,1949,1949,Lewiston; Cottonwood; Craigmont; C
 directories0566,Lewiston,phone book,1952-03,1952-03,Lewiston; Cottonwood; Craigmont; Culdesac; Ferdinand; Gifford; Grangeville; Kamiah; Kooskia; Lapwai; Nezperce; Reubens; Stites; Winchester,,record,record,no
 directories0567,Lewiston,phone book,1952-11,1952-11,Lewiston; Cottonwood; Craigmont; Culdesac; Ferdinand; Gifford; Grangeville; Kamiah; Kooskia; Lapwai; Nezperce; Reubens; Stites; Winchester,,record,record,no
 directories0568,Lewiston,Polk,1953,1953,Lewiston; Lewiston Orchards,,record,record,no
-directories0569,Lewiston,phone book,1954,1954,Lewiston; Cottonwood; Craigmont; Culdesac; Ferdinand; Gifford; Grangeville; Kamiah; Kooskia; Lapwai; Nezperce; Reubens; Stites; Winchester,,record,record,no
+directories0569,Lewiston,phone book,1954,1954,Lewiston; Cottonwood; Craigmont; Culdesac; Ferdinand; Gifford; Grangeville; Kamiah; Kooskia; Lapwai; Nezperce; Reubens; Stites; Winchester,,record,record,yes
 directories0570,Lewiston,phone book,1955,1955,Lewiston; Cottonwood; Craigmont; Culdesac; Ferdinand; Gifford; Grangeville; Kamiah; Kooskia; Lapwai; Nezperce; Reubens; Stites; Winchester,,record,record,no
 directories0571,Lewiston,phone book,1956,1956,Lewiston; Cottonwood; Craigmont; Culdesac; Ferdinand; Gifford; Grangeville; Kamiah; Kooskia; Lapwai; Nezperce; Reubens; Stites; Winchester,,record,record,no
 directories0572,Lewiston,Polk,1956,1956,Lewiston; Lewiston Orchards,,record,record,no

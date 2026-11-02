@@ -99,13 +99,37 @@ function makeCard(obj) {
     return card;
 }
 
+/* parse a field-specific query like "towns_covered=carey" (used by word cloud links).
+   returns {fields: [...], term: "..."} or null if q is an ordinary text search */
+function parseFieldQuery(q) {
+    var eq = q.indexOf("=");
+    if (eq < 1) { return null; }
+    var fieldList = q.substring(0, eq).split(";").map(function(f) { return f.trim(); });
+    var known = {{ fields | map: "field" | jsonify }};
+    for (var i = 0; i < fieldList.length; i++) {
+        if (known.indexOf(fieldList[i]) < 0) { return null; }
+    }
+    return { fields: fieldList, term: q.substring(eq + 1).trim() };
+}
+
 /* filter items function */
 function filterItems(arr,q) {
     // show loading icon
     loadingIcon.classList.remove("d-none");
-    // dont filter if no q 
-    if (q=="") { 
-        var filteredItems = arr; 
+    var fieldQuery = parseFieldQuery(q);
+    // dont filter if no q
+    if (q=="") {
+        var filteredItems = arr;
+    } else if (fieldQuery) {
+        // exact match on whole semicolon-separated values in the given field(s),
+        // so "Carey" does not match "Careywood"
+        var term = fieldQuery.term.toUpperCase();
+        var filteredItems = arr.filter(function(item) {
+            return fieldQuery.fields.some(function(f) {
+                if (!item[f]) { return false; }
+                return item[f].split(";").some(function(v) { return v.trim().toUpperCase() == term; });
+            });
+        });
     } else {
         q = q.trim().toUpperCase(); 
         // js indexOf filter
@@ -169,7 +193,7 @@ if(window.location.hash) {
     } else {
         query = "";
     }
-    filterTextBox.value = query;
+    filterTextBox.value = parseFieldQuery(query) ? parseFieldQuery(query).term : query;
     filterItems(items,query);
 } else {
     query = "";
@@ -194,7 +218,7 @@ window.addEventListener("hashchange", function() {
     var hashValue = decodeURIComponent(location.hash.substr(1));
     if (hashValue != 'maincontent') { 
         query = hashValue;
-        filterTextBox.value = query;
+        filterTextBox.value = parseFieldQuery(query) ? parseFieldQuery(query).term : query;
         // filter
         filterItems(items,query);
     }
@@ -221,7 +245,9 @@ sortOptions.forEach((button) => {
     var field = button.dataset.filter;
     var display_name = button.textContent;
     // get current filter
-    var query = filterTextBox.value;
+    // keep a word-cloud exact-match filter if the box still shows its term
+    var currentField = parseFieldQuery(query);
+    var activeQuery = (currentField && currentField.term == filterTextBox.value) ? query : filterTextBox.value;
     // switch active sort option
     sortOptions.forEach((option) => { option.classList.remove("active"); } );
     button.classList.add("active");
@@ -229,11 +255,11 @@ sortOptions.forEach((button) => {
     // send to sort and filter
     if (field != 'random') {
         sorting(items, field);
-        filterItems(items, query);
+        filterItems(items, activeQuery);
     }
     else {
         shuffle(items);
-        filterItems(items, query);
+        filterItems(items, activeQuery);
     }
   });
 }); 
